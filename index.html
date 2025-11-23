@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Office Pantry — Quick Order</title>
-  <meta name="description" content="Order from the office pantry and send it to the tea boy via WhatsApp" />
+  <title>Tadbeir Pantry Order</title>
+  <meta name="description" content="Order from the Tadbeir pantry and send it to the tea boy via WhatsApp" />
   <style>
     :root{font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#111}
     body{margin:0;background:#f6f7fb;display:flex;min-height:100vh;align-items:center;justify-content:center;padding:28px}
@@ -27,12 +27,18 @@
     .qty-box{display:flex;align-items:center;gap:6px;margin-left:auto}
     .qty-btn{width:30px;height:30px;border-radius:6px;border:1px solid #e6e9f2;background:#fff;cursor:pointer;font-weight:700}
     .qty-value{min-width:22px;display:inline-block;text-align:center}
+    .separator{margin-top:12px;margin-bottom:6px;font-weight:bold;color:#333}
+    .title-container{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+    .title-container img{height:40px}
     @media (max-width:880px){.grid{grid-template-columns:1fr;}.right{order:2}}
   </style>
 </head>
 <body>
   <div class="card">
-    <h1>Office Pantry — Quick Order</h1>
+    <div class="title-container">
+      <img src="/mnt/data/f65f1d80-6896-4e41-87b6-c1ac065d19f0.png" alt="Tadbeir Logo">
+      <h1>Tadbeir Pantry Order</h1>
+    </div>
     <p class="lead">Choose what you want and the office you're in. The order will open in WhatsApp to be sent to the pantry.</p>
 
     <div class="grid">
@@ -40,18 +46,17 @@
         <div>
           <strong>Menu</strong>
           <div class="menu-list" style="margin-top:10px">
-            <div class="item" data-id="coffee"><input type="checkbox" id="i_coffee" name="items" value="Coffee"><label for="i_coffee">Coffee</label><div class="qty-box"><button type="button" class="qty-btn minus">-</button><span class="qty-value">1</span><button type="button" class="qty-btn plus">+</button></div></div>
-            <div class="item" data-id="tea"><input type="checkbox" id="i_tea" name="items" value="Tea"><label for="i_tea">Tea</label><div class="qty-box"><button type="button" class="qty-btn minus">-</button><span class="qty-value">1</span><button type="button" class="qty-btn plus">+</button></div></div>
-            <div class="item" data-id="capp"><input type="checkbox" id="i_capp" name="items" value="Cappuccino"><label for="i_capp">Cappuccino</label><div class="qty-box"><button type="button" class="qty-btn minus">-</button><span class="qty-value">1</span><button type="button" class="qty-btn plus">+</button></div></div>
-            <div class="item" data-id="espresso"><input type="checkbox" id="i_espresso" name="items" value="Espresso"><label for="i_espresso">Espresso</label><div class="qty-box"><button type="button" class="qty-btn minus">-</button><span class="qty-value">1</span><button type="button" class="qty-btn plus">+</button></div></div>
-            <div class="item" data-id="latte"><input type="checkbox" id="i_latte" name="items" value="Latte"><label for="i_latte">Latte</label><div class="qty-box"><button type="button" class="qty-btn minus">-</button><span class="qty-value">1</span><button type="button" class="qty-btn plus">+</button></div></div>
-            <div class="item" data-id="hotchoc"><input type="checkbox" id="i_hotchoc" name="items" value="Hot Chocolate"><label for="i_hotchoc">Hot Chocolate</label><div class="qty-box"><button type="button" class="qty-btn minus">-</button><span class="qty-value">1</span><button type="button" class="qty-btn plus">+</button></div></div>
-            <div class="item" data-id="water"><input type="checkbox" id="i_water" name="items" value="Bottled Water"><label for="i_water">Bottled Water</label><div class="qty-box"><button type="button" class="qty-btn minus">-</button><span class="qty-value">1</span><button type="button" class="qty-btn plus">+</button></div></div>
+            <div class="item" data-id="coffee"><input type="checkbox" id="i_coffee" name="items" value="Coffee"><label for="i_coffee">Coffee</label><div class="qty-box"><button type="button" class="qty-btn minus">-</button><span class="qty-value">0</span><button type="button" class="qty-btn plus">+</button></div></div>
+            <div class="item" data-id="tea"><input type="checkbox" id="i_tea" name="items" value="Tea"><label for="i_tea">Tea</label><div class="qty-box"><button type="button" class="qty-btn minus">-</button><span class="qty-value">0</span><button type="button" class="qty-btn plus">+</button></div></div>
+            <div class="item" data-id="capp"><input type="checkbox" id="i_capp" name="items" value="Cappuccino"><label for="i_capp">Cappuccino</label><div class="qty-box"><button type="button" class="qty-btn minus">-</button><span class="qty-value">0</span><button type="button" class="qty-btn plus">+</button></div></div>
+            <div class="item" data-id="espresso"><input type="checkbox" id="i_espresso" name="items" value="Espresso"><label for="i_espresso">Espresso</label><div class="qty-box"><button type="button" class="qty-btn minus">-</button><span class="qty-value">0</span><button type="button" class="qty-btn plus">+</button></div></div>
+            <div class="item" data-id="latte"><input type="checkbox" id="i_latte" name="items" value="Latte"><label for="i_latte">Latte</label><div class="qty-box"><button type="button" class="qty-btn minus">-</button><span class="qty-value">0</span><button type="button" class="qty-btn plus">+</button></div></div>
+            <div class="item" data-id="hotchoc"><input type="checkbox" id="i_hotchoc" name="items" value="Hot Chocolate"><label for="i_hotchoc">Hot Chocolate</label><div class="qty-box"><button type="button" class="qty-btn minus">-</button><span class="qty-value">0</span><button type="button" class="qty-btn plus">+</button></div></div>
+            <div class="item" data-id="water"><input type="checkbox" id="i_water" name="items" value="Bottled Water"><label for="i_water">Bottled Water</label><div class="qty-box"><button type="button" class="qty-btn minus">-</button><span class="qty-value">0</span><button type="button" class="qty-btn plus">+</button></div></div>
           </div>
-        </div>
 
-        <div style="margin-top:8px">
-          <label class="small">If you want to add quantities, use the + / - buttons next to each item.</label>
+          <div class="separator">Extras</div>
+          <div class="item" data-id="sugar"><input type="checkbox" id="i_sugar" name="items" value="Sugar"><label for="i_sugar">Sugar</label><div class="qty-box"><button type="button" class="qty-btn minus">-</button><span class="qty-value">0</span><button type="button" class="qty-btn plus">+</button></div></div>
         </div>
 
         <div class="notes" style="margin-top:8px">
@@ -59,47 +64,38 @@
           <textarea id="notes" name="notes" rows="3" placeholder="e.g. No sugar, extra hot, please deliver to the reception"></textarea>
         </div>
 
-        <div style="margin-top:8px">
-          <button type="submit">Send order to WhatsApp</button>
-        </div>
+        <div class="right">
+          <div class="office">
+            <label for="office"><strong>Select your office</strong></label>
+            <select id="office">
+              <option value="Office 1">Office 1</option>
+              <option value="Office 2">Office 2</option>
+              <option value="Office 3">Office 3</option>
+              <option value="Reception">Reception</option>
+              <option value="Meeting Room">Meeting Room</option>
+            </select>
+          </div>
 
-        <footer>
-          <div class="small">Tip: after clicking the button WhatsApp will open with a pre-filled message. The tea boy's number is set automatically.</div>
-        </footer>
+          <div class="summary" style="margin-top:8px">
+            <strong>Order preview</strong>
+            <div id="preview" style="margin-top:8px;color:#222">No items selected yet.</div>
+          </div>
+
+          <div style="display:flex;gap:8px;align-items:center;margin-top:8px">
+            <div class="small">Tea boy WhatsApp:</div>
+            <div class="meta"><input id="teaNumber" placeholder="e.g. 9665XXXXXXXX" style="padding:8px;border-radius:8px;border:1px solid #e6e9f2" value="966537772449" /></div>
+          </div>
+
+          <div style="margin-top:12px">
+            <button type="submit">Send order to WhatsApp</button>
+          </div>
+        </div>
       </form>
-
-      <div class="right">
-        <div class="office">
-          <label for="office"><strong>Select your office</strong></label>
-          <select id="office">
-            <option value="Office 1">Office 1</option>
-            <option value="Office 2">Office 2</option>
-            <option value="Office 3">Office 3</option>
-            <option value="Reception">Reception</option>
-            <option value="Meeting Room">Meeting Room</option>
-          </select>
-          <div class="small">Need different office names? Edit the <code>&lt;select&gt;</code> in the HTML.</div>
-        </div>
-
-        <div class="summary">
-          <strong>Order preview</strong>
-          <div id="preview" style="margin-top:8px;color:#222">No items selected yet.</div>
-        </div>
-
-        <div style="display:flex;gap:8px;align-items:center">
-          <div class="small">Tea boy WhatsApp:</div>
-          <div class="meta"><input id="teaNumber" placeholder="e.g. 9665XXXXXXXX" style="padding:8px;border-radius:8px;border:1px solid #e6e9f2" value="966537772449" /></div>
-        </div>
-
-        <div class="small" style="margin-top:6px;color:#666">Use international format without plus sign.</div>
-      </div>
     </div>
   </div>
 
   <script>
-    const items = [
-      {id:'coffee'}, {id:'tea'}, {id:'capp'}, {id:'espresso'}, {id:'latte'}, {id:'hotchoc'}, {id:'water'}
-    ];
+    const items = ['coffee','tea','capp','espresso','latte','hotchoc','water','sugar'];
 
     const preview = document.getElementById('preview');
     const officeEl = document.getElementById('office');
@@ -118,10 +114,13 @@
     function updatePreview(){
       const lines = [];
       items.forEach(it=>{
-        const {cb, qtySpan} = elemsFor(it.id);
-        if(cb && cb.checked){
-          const qty = qtySpan ? parseInt(qtySpan.textContent||'1',10) : 1;
+        const {cb, qtySpan} = elemsFor(it);
+        const qty = qtySpan ? parseInt(qtySpan.textContent||'0',10) : 0;
+        if(cb && qty>0){
+          cb.checked = true;
           lines.push(`${cb.value} x${qty}`);
+        } else if(cb) {
+          cb.checked = false;
         }
       });
       if(lines.length===0){ preview.textContent='No items selected yet.'; return; }
@@ -134,17 +133,10 @@
     }
 
     items.forEach(it=>{
-      const {cb, qtySpan, minusBtn, plusBtn} = elemsFor(it.id);
+      const {cb, qtySpan, minusBtn, plusBtn} = elemsFor(it);
       if(!cb) return;
-      const setQtyEnabled = (enabled)=>{
-        if(minusBtn) minusBtn.disabled = !enabled;
-        if(plusBtn) plusBtn.disabled = !enabled;
-        if(qtySpan) qtySpan.style.opacity = enabled ? '1' : '0.5';
-      };
-      setQtyEnabled(cb.checked);
-      cb.addEventListener('change', ()=>{ setQtyEnabled(cb.checked); updatePreview(); });
-      if(minusBtn){ minusBtn.addEventListener('click', ()=>{ let val=parseInt(qtySpan.textContent||'1',10); if(val>1) val--; qtySpan.textContent=val; updatePreview(); }); }
-      if(plusBtn){ plusBtn.addEventListener('click', ()=>{ let val=parseInt(qtySpan.textContent||'1',10); val++; qtySpan.textContent=val; updatePreview(); }); }
+      if(minusBtn){ minusBtn.addEventListener('click', ()=>{ let val=parseInt(qtySpan.textContent||'0',10); if(val>0) val--; qtySpan.textContent=val; updatePreview(); }); }
+      if(plusBtn){ plusBtn.addEventListener('click', ()=>{ let val=parseInt(qtySpan.textContent||'0',10); val++; qtySpan.textContent=val; updatePreview(); }); }
     });
 
     officeEl.addEventListener('change', updatePreview);
@@ -154,9 +146,9 @@
       ev.preventDefault();
       const lines=[];
       items.forEach(it=>{
-        const {cb, qtySpan} = elemsFor(it.id);
+        const {cb, qtySpan} = elemsFor(it);
         if(cb && cb.checked){
-          const qty = qtySpan ? parseInt(qtySpan.textContent||'1',10) : 1;
+          const qty = qtySpan ? parseInt(qtySpan.textContent||'0',10) : 0;
           lines.push(`${cb.value} x${qty}`);
         }
       });
